@@ -1,6 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondoM">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primariom"
+        android:alpha="0.7"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/man_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="32sp"
+            android:textColor="@color/white"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:padding="28dp">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.button.MaterialButton
+                  android:id="@+id/Registrar"
+                  android:layout_width="100dp"
+                  android:layout_height="80dp"
+                  android:background="@drawable/add_icon"
+                  app:backgroundTint="@color/primariom"
+                  app:cornerRadius="32dp" />
+
+              <com.google.android.material.button.MaterialButton
+                  android:id="@+id/agregrabtn"
+                  android:layout_width="100dp"
+                  android:layout_height="80dp"
+                  android:background="@drawable/addlist_icon"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  app:backgroundTint="@color/primariom"
+                  app:cornerRadius="32dp" />
+
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:textStyle="bold"
+                  android:textColor="@color/primario"
+                  android:text="Agregar Actividades" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:textColor="@color/primario"
+                  android:text="Registrar Alumno" />
+          </RelativeLayout>
+          <View
+              android:layout_width="wrap_content"
+              android:layout_height="30dp" />
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.button.MaterialButton
+                  android:id="@+id/Verbtn"
+                  android:layout_width="100dp"
+                  android:layout_height="80dp"
+                  android:background="@drawable/viewlist_icon"
+                  app:backgroundTint="@color/primariom"
+                  app:cornerRadius="32dp" />
+
+              <com.google.android.material.button.MaterialButton
+                  android:id="@+id/Eliminarbtn"
+                  android:layout_width="100dp"
+                  android:layout_height="80dp"
+                  android:background="@drawable/removelist_icon"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  app:backgroundTint="@color/primariom"
+                  app:cornerRadius="32dp" />
+
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:textStyle="bold"
+                  android:textColor="@color/primario"
+                  android:text="Eliminar Alumnos" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:textColor="@color/primario"
+                  android:text="  Ver Alumnos" />
+          </RelativeLayout>
+          <View
+              android:layout_width="wrap_content"
+              android:layout_height="30dp" />
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/Exitbtn"
+              android:layout_width="100dp"
+              android:layout_height="80dp"
+              android:background="@drawable/exit_icon"
+              app:backgroundTint="@color/primariom"
+              app:cornerRadius="32dp" />
+
+
+      </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
