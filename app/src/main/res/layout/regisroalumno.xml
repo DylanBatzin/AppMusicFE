@@ -68,11 +68,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="0.7"
-                android:text="Ingrese el Nombre"
+                android:text="Ingrese el Usuario"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/nametxt"
+                android:id="@+id/userregtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/done_icon"
@@ -136,23 +136,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
 
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="0.7"
-                android:text="Ingresa el nombre de la Academia"
+                android:text="Ingresa el Nombre"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/academiatxt"
+                android:id="@+id/nametxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/password_icon"
+                android:drawableEnd="@drawable/done_icon"
                 android:inputType="text" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:text="Ingresa el Apellido"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/lastnametxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/done_icon"
+                android:inputType="text" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginbtn"
