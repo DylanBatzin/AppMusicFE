@@ -68,15 +68,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.7"
-            android:text="Ingrese el Correo"
+            android:text="Ingrese el Usuario"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/correotxt"
+            android:id="@+id/usuariotxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/done_icon"
-            android:inputType="textEmailAddress" />
+            android:inputType="text" />
 
         <View
             android:layout_width="wrap_content"
