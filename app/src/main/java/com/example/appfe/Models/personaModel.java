@@ -1,7 +1,7 @@
 package com.example.appfe.Models;
 
 public class personaModel {
-    private int id_persona;
+    private Long id_persona;
     private int id_usuario;
     private int id_academia;
     private String nombre;
@@ -17,11 +17,11 @@ public class personaModel {
         this.apellido = apellido;
         this.tipo = tipo;
     }
-    public int getId_persona() {
+    public Long getId_persona() {
         return id_persona;
     }
 
-    public void setId_persona(int id_persona) {
+    public void setId_persona(Long id_persona) {
         this.id_persona = id_persona;
     }
 

@@ -42,6 +42,24 @@
             android:name=".RegistroAlumnoActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".VerAlumnos"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".eliminarlaumno"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".EditStudentActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Asignarleccion"
+            android:exported="true">
+
+        </activity>
+
     </application>
 
 </manifest>

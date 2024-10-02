@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppFE</string>
+    <string name="select">Seleccionar Item</string>
 </resources>

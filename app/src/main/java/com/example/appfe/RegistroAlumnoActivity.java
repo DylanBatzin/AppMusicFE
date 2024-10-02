@@ -1,5 +1,6 @@
 package com.example.appfe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ import java.util.List;
 public class RegistroAlumnoActivity extends AppCompatActivity {
 
     private EditText userregtxt, correotxt, passwordtxt, confirmpasswordtxt, nametxt, lastnametxt;
-    private MaterialButton registrarBtn;
+    private MaterialButton registrarBtn, salirbtn;
     private usuarioInterface usuarioapi;
     private personaInterface personaapi;
     private int academiaId;
@@ -52,6 +53,7 @@ public class RegistroAlumnoActivity extends AppCompatActivity {
         nametxt = findViewById(R.id.nametxt);
         lastnametxt = findViewById(R.id.lastnametxt);
         registrarBtn = findViewById(R.id.loginbtn);
+        salirbtn = findViewById(R.id.btnsalir);
 
         // Inicializar Retrofit
         Retrofit retrofit = new Retrofit.Builder()
@@ -61,6 +63,15 @@ public class RegistroAlumnoActivity extends AppCompatActivity {
 
         usuarioapi = retrofit.create(usuarioInterface.class);
         personaapi = retrofit.create(personaInterface.class);
+
+        salirbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistroAlumnoActivity.this, Maindocente.class);
+                intent.putExtra("ACADEMIA_ID", academiaId);
+                startActivity(intent);
+            }
+        });
 
         registrarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,20 +97,17 @@ public class RegistroAlumnoActivity extends AppCompatActivity {
         String username = userregtxt.getText().toString();
         String email = correotxt.getText().toString();
         String password = passwordtxt.getText().toString();
-
         usuarioModel newUser = new usuarioModel(username, email, password);
-
         usuarioapi.crearUsuario(newUser).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(RegistroAlumnoActivity.this, "Usuario creado exitosamente", Toast.LENGTH_SHORT).show();
-                    fetchUserIdAndRegisterPersona(username); // Obtener el ID del usuario y registrar la persona
+                    fetchUserIdAndRegisterPersona(username);
                 } else {
                     Toast.makeText(RegistroAlumnoActivity.this, "Error al crear el usuario", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
                 Toast.makeText(RegistroAlumnoActivity.this, "Error de red: " + t.getMessage(), Toast.LENGTH_SHORT).show();

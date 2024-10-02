@@ -19,11 +19,11 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:src="@drawable/add_icon" />
+            android:src="@drawable/edit_icon" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resgistro"
+            android:text="Asignar"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
             android:textSize="32sp"
@@ -46,135 +46,97 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="28dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Registro"
+                    android:text="Seleccione al Alumno"
                     android:textColor="@color/primario"
                     android:textSize="32sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingresa los datos del Alumno" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingrese el Usuario"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/userregtxt"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/done_icon"
-                    android:inputType="text" />
+                    android:layout_margin="16dp"
+                    android:hint="@string/select"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_completetxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
 
-                <View
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione la leccion"
+                    android:textColor="@color/primario"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="@string/select"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_completetxt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione la Actividad"
+                    android:textColor="@color/primario"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="@string/select"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_completetxt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingrese el Correo"
+                    android:text="Seleccione la Evalucion"
+                    android:textColor="@color/primario"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/correotxt"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/done_icon"
-                    android:inputType="textEmailAddress" />
+                    android:layout_margin="16dp"
+                    android:hint="@string/select"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_completetxt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingrese La contraseña"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/passwordtxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/password_icon"
-                    android:inputType="textPassword" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Confirma la Contraseña"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/confirmpasswordtxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/password_icon"
-                    android:inputType="textPassword" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingresa el Nombre"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/nametxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/done_icon"
-                    android:inputType="text" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.7"
-                    android:text="Ingresa el Apellido"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/lastnametxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/done_icon"
-                    android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/loginbtn"
+                    android:id="@+id/asignarbtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Registrar"
+                    android:text="Asignar"
                     app:cornerRadius="32dp" />
 
                 <View

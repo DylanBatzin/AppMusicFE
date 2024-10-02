@@ -19,11 +19,11 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:src="@drawable/add_icon" />
+            android:src="@drawable/edit_icon" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resgistro"
+            android:text="Editar"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
             android:textSize="32sp"
@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Registro"
+                    android:text="Editar Alumno"
                     android:textColor="@color/primario"
                     android:textSize="32sp"
                     android:textStyle="bold" />
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="0.7"
-                    android:text="Ingresa los datos del Alumno" />
+                    android:text="Ingresa los nuevos datos del Alumno" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -174,19 +174,14 @@
                     android:id="@+id/loginbtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Registrar"
+                    android:text="Actualizar"
                     app:cornerRadius="32dp" />
 
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="10dp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnsalir"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:text="Salir"
-                    app:cornerRadius="32dp" />
+
             </LinearLayout>
 
 

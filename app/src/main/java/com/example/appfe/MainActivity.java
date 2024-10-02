@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
                         showToast("Error en la respuesta");
                     }
                 }
-
                 @Override
                 public void onFailure(Call<List<usuarioModel>> call, Throwable t) {
                     handleError(t);
